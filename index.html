@@ -3,369 +3,2129 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>ROL GO | Wrotkowisko • Kawiarnia • Zabawa</title>
-<meta name="description" content="ROL GO — nowoczesne wrotkowisko z mini kawiarnią. Sucha Beskidzka.">
+
+<meta name="description"
+content="ROL GO — nowoczesne wrotkowisko z mini kawiarnią w Suchej Beskidzkiej.">
 
 <style>
 :root{
---navy:#07132e;--navy2:#0d2148;--cyan:#10c9f3;
---yellow:#ffd21c;--pink:#ff2aa6;--white:#fff;
---muted:#b9c7df;--line:#ffffff1c
+  --navy:#07132e;
+  --navy2:#0d2148;
+  --cyan:#10c9f3;
+  --yellow:#ffd21c;
+  --pink:#ff2aa6;
+  --white:#fff;
+  --muted:#b9c7df;
+  --line:#ffffff1c;
+  --green:#25d366;
+  --red:#ff3b30;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-margin:0;background:var(--navy);color:#fff;
-font-family:Inter,Arial,sans-serif;line-height:1.5
+  margin:0;
+  background:var(--navy);
+  color:#fff;
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.5;
 }
-a{color:inherit}
-.container{width:min(1120px,calc(100% - 40px));margin:auto}
+
+a{
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* ===== MENU ===== */
 
 header{
-position:sticky;top:0;z-index:20;background:#07132eee;
-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#07132eee;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
+
 .nav{
-height:78px;display:flex;align-items:center;
-justify-content:space-between
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.brand img{width:68px;height:68px;object-fit:contain}
-.links{display:flex;gap:20px;font-weight:800;flex-wrap:wrap}
-.links a{text-decoration:none}
-.links a:hover{color:var(--yellow)}
+
+.brand img{
+  width:68px;
+  height:68px;
+  object-fit:contain;
+}
+
+.links{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:flex-end;
+  font-weight:800;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.links a{
+  text-decoration:none;
+}
+
+.links a:hover{
+  color:var(--yellow);
+}
+
 .menu{
-display:none;border:0;background:none;color:white;
-font-size:30px
+  display:none;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
 }
+
+/* ===== HERO ===== */
 
 .hero{
-min-height:calc(100vh - 78px);display:grid;
-grid-template-columns:1fr 1fr;align-items:center;
-gap:30px;padding:65px 0
-}
-.badge{
-display:inline-block;color:var(--yellow);
-font-weight:900;letter-spacing:3px;text-transform:uppercase
-}
-h1{
-font-size:clamp(65px,10vw,125px);line-height:.78;
-margin:17px 0;background:linear-gradient(
-90deg,var(--cyan),#61dcff,var(--yellow));
--webkit-background-clip:text;color:transparent
-}
-.hero h2{
-font-size:clamp(27px,4vw,46px);
-line-height:1.05;margin:0 0 18px
-}
-.lead{font-size:20px;color:var(--muted);max-width:650px}
-.actions{
-display:flex;gap:12px;flex-wrap:wrap;margin-top:26px
-}
-.btn{
-display:inline-block;padding:14px 24px;
-border-radius:999px;text-decoration:none;font-weight:900
-}
-.primary{
-background:var(--pink);
-box-shadow:0 12px 35px #ff2aa64a
-}
-.secondary{border:2px solid #ffffff35}
-.hero-art{
-width:100%;max-width:560px;margin:auto;display:block;
-filter:drop-shadow(0 30px 45px #0009)
+  min-height:calc(100vh - 78px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:30px;
+  padding:65px 0;
 }
 
-section{padding:90px 0}
-.section-head{margin-bottom:30px}
+.badge{
+  display:inline-block;
+  color:var(--yellow);
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+h1{
+  font-size:clamp(65px,10vw,125px);
+  line-height:.78;
+  margin:17px 0;
+  background:linear-gradient(
+    90deg,
+    var(--cyan),
+    #61dcff,
+    var(--yellow)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero h2{
+  font-size:clamp(27px,4vw,46px);
+  line-height:1.05;
+  margin:0 0 18px;
+}
+
+.lead{
+  font-size:20px;
+  color:var(--muted);
+  max-width:650px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+  border:0;
+  cursor:pointer;
+}
+
+.primary{
+  background:var(--pink);
+  box-shadow:0 12px 35px #ff2aa64a;
+}
+
+.secondary{
+  border:2px solid #ffffff35;
+}
+
+.hero-art{
+  width:100%;
+  max-width:560px;
+  margin:auto;
+  display:block;
+  filter:drop-shadow(0 30px 45px #0009);
+}
+
+/* ===== SEKCJE ===== */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  margin-bottom:30px;
+}
+
 .eyebrow{
-color:var(--pink);font-weight:900;letter-spacing:2px
+  color:var(--pink);
+  font-weight:900;
+  letter-spacing:2px;
 }
+
 .section-head h2{
-font-size:clamp(36px,5vw,58px);margin:5px 0 8px
+  font-size:clamp(36px,5vw,58px);
+  margin:5px 0 8px;
 }
-.section-head p{color:var(--muted);font-size:18px}
+
+.section-head p{
+  color:var(--muted);
+  font-size:18px;
+}
+
+/* ===== KARTY ===== */
 
 .cards{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
-.card{
-background:linear-gradient(145deg,#102651,#0b1b3b);
-border:1px solid var(--line);border-radius:26px;
-padding:28px;min-height:205px
-}
-.icon{font-size:38px}
-.card h3{font-size:24px;margin:12px 0 7px}
-.card p{color:var(--muted);margin:0}
 
-.dark{background:#050c1d}
+.card{
+  background:linear-gradient(145deg,#102651,#0b1b3b);
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:28px;
+  min-height:205px;
+}
+
+.icon{
+  font-size:38px;
+}
+
+.card h3{
+  font-size:24px;
+  margin:12px 0 7px;
+}
+
+.card p{
+  color:var(--muted);
+  margin:0;
+}
+
+.dark{
+  background:#050c1d;
+}
+
+/* ===== CENNIK ===== */
+
 .price{
-font-size:40px;font-weight:1000;color:var(--yellow)
+  font-size:40px;
+  font-weight:1000;
+  color:var(--yellow);
 }
+
 .price small{
-font-size:15px;color:var(--muted);font-weight:700
+  font-size:15px;
+  color:var(--muted);
+  font-weight:700;
 }
-.price-card{min-height:0}
+
+.price-card{
+  min-height:0;
+}
+
 .price-card ul{
-padding:0;margin:16px 0 0;
-list-style:none;color:var(--muted)
+  padding:0;
+  margin:16px 0 0;
+  list-style:none;
+  color:var(--muted);
 }
+
 .price-card li{
-padding:6px 0;border-bottom:1px solid var(--line)
+  padding:6px 0;
+  border-bottom:1px solid var(--line);
 }
+
+/* ===== GALERIA ===== */
 
 .gallery{
-display:grid;grid-template-columns:1.2fr .8fr;gap:18px
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
 }
+
 .gallery img{
-width:100%;height:100%;object-fit:cover;
-border-radius:25px;border:1px solid var(--line)
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:25px;
+  border:1px solid var(--line);
 }
-.gallery .big{min-height:520px}
+
+.gallery .big{
+  min-height:520px;
+}
+
+/* ===== WYDARZENIA ===== */
 
 .events{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
+
 .event{
-padding:25px;border-radius:24px;
-background:#111f3d;border:1px solid var(--line)
+  padding:25px;
+  border-radius:24px;
+  background:#111f3d;
+  border:1px solid var(--line);
 }
-.event strong{font-size:21px}
-.event p{color:var(--muted)}
+
+.event strong{
+  font-size:21px;
+}
+
+.event p{
+  color:var(--muted);
+}
+
+/* ===== KONTAKT ===== */
 
 .contact{
-display:grid;grid-template-columns:1fr 1fr;gap:25px
-}
-.contact-box{
-padding:32px;border-radius:28px;
-background:linear-gradient(135deg,#122b59,#14123d);
-border:1px solid var(--line)
-}
-.contact-row{
-padding:14px 0;border-bottom:1px solid var(--line)
-}
-.contact-row b{
-display:block;color:var(--cyan)
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
 }
 
-footer{
-padding:35px 0;color:#8fa2c3;
-border-top:1px solid var(--line);text-align:center
+.contact-box{
+  padding:32px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#122b59,#14123d);
+  border:1px solid var(--line);
 }
-.note{font-size:13px;color:#8396b8;margin-top:20px}
+
+.contact-row{
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.contact-row b{
+  display:block;
+  color:var(--cyan);
+}
 
 /* ===== REZERWACJA ===== */
 
 .booking-wrap{
-display:grid;grid-template-columns:1.15fr .85fr;gap:24px
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:24px;
 }
 
-.calendar-box,.booking-form{
-background:linear-gradient(145deg,#102651,#0b1b3b);
-border:1px solid var(--line);
-border-radius:28px;
-padding:24px
+.calendar-box,
+.booking-form{
+  background:linear-gradient(145deg,#102651,#0b1b3b);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
 }
 
 .calendar-head{
-display:flex;align-items:center;
-justify-content:space-between;
-gap:12px;margin-bottom:18px
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:18px;
 }
 
 .calendar-head h3{
-margin:0;font-size:26px
+  margin:0;
+  font-size:26px;
 }
 
 .cal-btn{
-border:1px solid #ffffff35;
-background:#07132e;color:#fff;
-border-radius:12px;
-padding:10px 14px;
-font-size:20px;
-cursor:pointer
+  border:1px solid #ffffff35;
+  background:#07132e;
+  color:#fff;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:20px;
+  cursor:pointer;
 }
 
-.weekdays,.calendar{
-display:grid;
-grid-template-columns:repeat(7,1fr);
-gap:7px
+.weekdays,
+.calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:7px;
 }
 
 .weekdays div{
-text-align:center;color:var(--muted);
-font-size:12px;font-weight:800;padding:5px 0
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+  padding:5px 0;
 }
 
 .day{
-min-height:48px;
-border:1px solid #ffffff18;
-border-radius:12px;
-background:#0b1b3b;
-color:#fff;
-cursor:pointer;
-font-weight:800
+  min-height:48px;
+  border:1px solid #ffffff18;
+  border-radius:12px;
+  background:#0b1b3b;
+  color:#fff;
+  cursor:pointer;
+  font-weight:800;
 }
 
 .day.empty{
-visibility:hidden;
-cursor:default
+  visibility:hidden;
+  cursor:default;
 }
 
 .day.past{
-opacity:.3;
-cursor:not-allowed
+  opacity:.3;
+  cursor:not-allowed;
 }
 
 .day.available{
-border-color:#25d366;
-background:#103d32
+  border-color:var(--green);
+  background:#103d32;
 }
 
 .day.booked{
-border-color:#ff3b30;
-background:#7d1f25;
-color:#fff;
-cursor:not-allowed
+  border-color:var(--red);
+  background:#7d1f25;
+  color:#fff;
+  cursor:not-allowed;
 }
 
 .day.selected{
-outline:3px solid var(--yellow);
-background:#665600
+  outline:3px solid var(--yellow);
+  background:#665600;
 }
 
 .booking-legend{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-margin-top:16px;
-color:var(--muted);
-font-size:13px
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:16px;
+  color:var(--muted);
+  font-size:13px;
 }
 
 .legend-item{
-display:flex;
-align-items:center;
-gap:7px
+  display:flex;
+  align-items:center;
+  gap:7px;
 }
 
 .legend-dot{
-width:13px;
-height:13px;
-border-radius:4px
+  width:13px;
+  height:13px;
+  border-radius:4px;
 }
 
-.green{background:#25d366}
-.red{background:#ff3b30}
-.yellow{background:var(--yellow)}
+.green{
+  background:var(--green);
+}
+
+.red{
+  background:var(--red);
+}
+
+.yellow{
+  background:var(--yellow);
+}
 
 .booking-form h3{
-margin-top:0;font-size:26px
+  margin-top:0;
+  font-size:26px;
 }
 
 .booking-form label{
-display:block;
-margin:13px 0 6px;
-font-weight:800
+  display:block;
+  margin:13px 0 6px;
+  font-weight:800;
 }
 
 .booking-form input,
 .booking-form select{
-width:100%;
-padding:13px;
-border-radius:12px;
-border:1px solid #ffffff2a;
-background:#07132e;
-color:#fff;
-font-size:16px
+  width:100%;
+  padding:13px;
+  border-radius:12px;
+  border:1px solid #ffffff2a;
+  background:#07132e;
+  color:#fff;
+  font-size:16px;
+}
+
+.booking-form input::placeholder{
+  color:#8fa2c3;
 }
 
 .payment-options{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
 .payment-options label{
-margin:0;
-padding:12px;
-border:1px solid #ffffff25;
-border-radius:12px;
-cursor:pointer;
-font-size:14px
+  margin:0;
+  padding:12px;
+  border:1px solid #ffffff25;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:14px;
 }
 
 .payment-options input{
-width:auto;
-margin-right:6px
+  width:auto;
+  margin-right:6px;
 }
 
 .booking-status{
-margin-top:15px;
-padding:12px;
-border-radius:12px;
-display:none
+  margin-top:15px;
+  padding:12px;
+  border-radius:12px;
+  display:none;
 }
 
 .booking-status.ok{
-display:block;
-background:#124b2c;
-border:1px solid #25d366
+  display:block;
+  background:#124b2c;
+  border:1px solid var(--green);
 }
 
 .booking-status.error{
-display:block;
-background:#5b1e23;
-border:1px solid #ff3b30
+  display:block;
+  background:#5b1e23;
+  border:1px solid var(--red);
 }
 
 .booking-note{
-font-size:12px;
-color:var(--muted);
-margin-top:12px
+  font-size:12px;
+  color:var(--muted);
+  margin-top:12px;
 }
 
-@media(max-width:800px){
-.links{display:none}
-.menu{display:block}
-.hero,.contact,.gallery{grid-template-columns:1fr}
-.cards,.events{grid-template-columns:1fr}
-.booking-wrap{grid-template-columns:1fr}
-.hero{text-align:center;padding-top:35px}
-.lead{margin-left:auto;margin-right:auto}
-.actions{justify-content:center}
-.hero-art{max-width:440px}
-.gallery .big{min-height:auto}
-.day{min-height:43px;padding:4px}
-.calendar-head h3{font-size:21px}
+/* ===== GODZINY ===== */
+
+.hours{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  max-width:800px;
+}
+
+.hour{
+  padding:20px;
+  border-radius:18px;
+  background:#111f3d;
+  border:1px solid var(--line);
+}
+
+.hour strong{
+  display:block;
+  color:var(--cyan);
+  font-size:19px;
+}
+
+.hour span{
+  color:var(--muted);
+}
+
+/* ===== STOPKA ===== */
+
+footer{
+  padding:35px 0;
+  color:#8fa2c3;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+
+.note{
+  font-size:13px;
+  color:#8396b8;
+  margin-top:20px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+  .links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:#07132e;
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+  }
+
+  .links.show{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero,
+  .contact,
+  .gallery,
+  .booking-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .cards,
+  .events{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    text-align:center;
+    padding-top:35px;
+  }
+
+  .lead{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .hero-art{
+    max-width:440px;
+  }
+
+  .gallery .big{
+    min-height:auto;
+  }
+
+  .day{
+    min-height:43px;
+    padding:4px;
+  }
+
+  .calendar-head h3{
+    font-size:21px;
+  }
+
+  .hours{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:480px){
+
+  .container{
+    width:min(100% - 24px,1120px);
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .calendar-box,
+  .booking-form{
+    padding:16px;
+  }
+
+  .weekdays,
+  .calendar{
+    gap:4px;
+  }
+
+  .day{
+    min-height:40px;
+    font-size:13px;
+    border-radius:9px;
+  }
+
+  .payment-options{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= MENU ================= -->
+
 <header>
-<div class="container nav">
+  <div class="container nav">
 
-<a class="brand" href="#">
-<img src="logo.png" alt="ROL GO">
-</a>
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="ROL GO">
+    </a>
 
-<nav class="links">
-<a href="#o-nas">O nas</a>
-<a href="#atrakcje">Atrakcje</a>
-<a href="#cennik">Cennik</a>
-<a href="#godziny">Godziny</a>
-<a href="#rezerwacja">Rezerwacja</a>
-<a href="#bufet">Bufet</a>
-<a href="#plakaty">Plakaty</a>
-<a href="#urodziny">Urodziny</a>
-<a href="#dzien-dziecka">Dzień Dziecka</a>
-<a href="#kontakt">Kontakt</a>
-<a href="https://www.facebook.com/share/1KLhuZUzrQ/"
-target="_blank" rel="noopener">Facebook</a>
-</nav>
+    <nav class="links" id="mainLinks">
 
-<button class="menu"
-onclick="document.querySelector('.links').style.display='flex'">
-☰
-</button>
+      <a href="#o-nas">O nas</a>
+      <a href="#atrakcje">Atrakcje</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#godziny">Godziny</a>
+      <a href="#rezerwacja">Rezerwacja</a>
+      <a href="#bufet">Bufet</a>
+      <a href="#plakaty">Plakaty</a>
+      <a href="#urodziny">Urodziny</a>
+      <a href="#dzien-dziecka">Dzień Dziecka</a>
+      <a href="#kontakt">Kontakt</a>
+
+      <a
+        href="https://www.facebook.com/share/1KLhuZUzrQ/"
+        target="_blank"
+        rel="noopener"
+      >
+        Facebook
+      </a>
+
+    </nav>
+
+    <button
+      class="menu"
+      type="button"
+      aria-label="Otwórz menu"
+      onclick="toggleMenu()"
+    >
+      ☰
+    </button>
+
+  </div>
+</header>
+
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+  <div class="container" style="display:contents">
+
+    <div>
+
+      <span class="badge">
+        Sucha Beskidzka
+      </span>
+
+      <h1>ROL GO</h1>
+
+      <h2>
+        Wrotkowisko, muzyka,
+        zabawa i mini kawiarnia.
+      </h2>
+
+      <p class="lead">
+        Miejsce stworzone dla dzieci, młodzieży,
+        rodzin i wszystkich, którzy lubią dobrą
+        zabawę na wrotkach.
+      </p>
+
+      <div class="actions">
+
+        <a
+          class="btn primary"
+          href="#rezerwacja"
+        >
+          ZAREZERWUJ TERMIN
+        </a>
+
+        <a
+          class="btn secondary"
+          href="#cennik"
+        >
+          ZOBACZ CENNIK
+        </a>
+
+      </div>
+
+    </div>
+
+    <div>
+      <img
+        class="hero-art"
+        src="logo.png"
+        alt="ROL GO"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= O NAS ================= -->
+
+<section id="o-nas">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        ROL GO
+      </div>
+
+      <h2>
+        Tu zaczyna się dobra zabawa.
+      </h2>
+
+      <p>
+        ROL GO to planowane nowoczesne
+        wrotkowisko w Suchej Beskidzkiej
+        z miejscem do jazdy, muzyką,
+        wydarzeniami i mini kawiarnią.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">🛼</div>
+        <h3>Wrotkowisko</h3>
+        <p>
+          Duża przestrzeń do jazdy,
+          muzyka i świetna atmosfera.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">☕</div>
+        <h3>Mini kawiarnia</h3>
+        <p>
+          Napoje, przekąski i miejsce,
+          w którym można odpocząć.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🎉</div>
+        <h3>Imprezy</h3>
+        <p>
+          Urodziny, imprezy tematyczne
+          i wydarzenia dla całych rodzin.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ATRAKCJE ================= -->
+
+<section id="atrakcje" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        ATRAKCJE
+      </div>
+
+      <h2>
+        Więcej niż jazda.
+      </h2>
+
+      <p>
+        ROL GO ma być miejscem,
+        do którego chce się wracać.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">🎶</div>
+        <h3>Muzyczne jazdy</h3>
+        <p>
+          Jazda przy muzyce i specjalne
+          sesje tematyczne.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">💡</div>
+        <h3>Wieczorne sesje</h3>
+        <p>
+          Kolorowe światła i wyjątkowa
+          atmosfera podczas jazdy.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>Dla rodzin</h3>
+        <p>
+          Przestrzeń przygotowana
+          również z myślą o rodzinach.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CENNIK ================= -->
+
+<section id="cennik">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        CENNIK
+      </div>
+
+      <h2>
+        Prosto i przejrzyście.
+      </h2>
+
+      <p>
+        Przykładowy cennik startowy —
+        przed otwarciem może zostać zmieniony.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card price-card">
+        <h3>Wejście standard</h3>
+
+        <div class="price">
+          25 zł
+          <small>/ osoba</small>
+        </div>
+
+        <ul>
+          <li>🛼 Wstęp na wrotkowisko</li>
+          <li>🎵 Sesja muzyczna</li>
+          <li>⏱️ Jedna sesja jazdy</li>
+        </ul>
+      </article>
+
+      <article class="card price-card">
+        <h3>Pakiet rodzinny</h3>
+
+        <div class="price">
+          85 zł
+          <small>/ 4 osoby</small>
+        </div>
+
+        <ul>
+          <li>🛼 Wstęp dla 4 osób</li>
+          <li>🎵 Sesja muzyczna</li>
+          <li>☕ Możliwość skorzystania z bufetu</li>
+        </ul>
+      </article>
+
+      <article class="card price-card">
+        <h3>Urodziny</h3>
+
+        <div class="price">
+          od 299 zł
+        </div>
+
+        <ul>
+          <li>🎂 Sala / strefa urodzinowa</li>
+          <li>🛼 Jazda na wrotkach</li>
+          <li>🎉 Możliwość przygotowania atrakcji</li>
+        </ul>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= GODZINY ================= -->
+
+<section id="godziny" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        GODZINY
+      </div>
+
+      <h2>
+        Kiedy można nas odwiedzić?
+      </h2>
+
+    </div>
+
+    <div class="hours">
+
+      <div class="hour">
+        <strong>Poniedziałek – Czwartek</strong>
+        <span>15:00 – 20:00</span>
+      </div>
+
+      <div class="hour">
+        <strong>Piątek</strong>
+        <span>15:00 – 22:00</span>
+      </div>
+
+      <div class="hour">
+        <strong>Sobota</strong>
+        <span>10:00 – 22:00</span>
+      </div>
+
+      <div class="hour">
+        <strong>Niedziela</strong>
+        <span>10:00 – 20:00</span>
+      </div>
+
+    </div>
+
+    <p class="note">
+      Godziny są przykładowe i mogą zostać
+      dostosowane przed rozpoczęciem działalności.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= REZERWACJA ================= -->
+
+<section id="rezerwacja">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        REZERWACJA ONLINE
+      </div>
+
+      <h2>
+        Wybierz dzień i zarezerwuj.
+      </h2>
+
+      <p>
+        Zielone dni są dostępne,
+        czerwone są zajęte.
+      </p>
+
+    </div>
+
+    <div class="booking-wrap">
+
+      <!-- KALENDARZ -->
+
+      <div class="calendar-box">
+
+        <div class="calendar-head">
+
+          <button
+            class="cal-btn"
+            type="button"
+            onclick="changeMonth(-1)"
+          >
+            ‹
+          </button>
+
+          <h3 id="calendarTitle">
+            -
+          </h3>
+
+          <button
+            class="cal-btn"
+            type="button"
+            onclick="changeMonth(1)"
+          >
+            ›
+          </button>
+
+        </div>
+
+        <div class="weekdays">
+
+          <div>Pn</div>
+          <div>Wt</div>
+          <div>Śr</div>
+          <div>Cz</div>
+          <div>Pt</div>
+          <div>So</div>
+          <div>Nd</div>
+
+        </div>
+
+        <div
+          class="calendar"
+          id="calendar"
+        ></div>
+
+        <div class="booking-legend">
+
+          <div class="legend-item">
+            <span class="legend-dot green"></span>
+            dostępny
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot red"></span>
+            zajęty
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot yellow"></span>
+            wybrany
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORMULARZ -->
+
+      <div class="booking-form">
+
+        <h3>
+          Szczegóły rezerwacji
+        </h3>
+
+        <form id="bookingForm">
+
+          <label for="selectedDate">
+            Wybrany dzień
+          </label>
+
+          <input
+            id="selectedDate"
+            name="selectedDate"
+            type="text"
+            readonly
+            placeholder="Najpierw wybierz dzień"
+          >
+
+          <label for="bookingName">
+            Imię i nazwisko
+          </label>
+
+          <input
+            id="bookingName"
+            name="bookingName"
+            type="text"
+            placeholder="Wpisz imię i nazwisko"
+            required
+          >
+
+          <label for="bookingEmail">
+            E-mail
+          </label>
+
+          <input
+            id="bookingEmail"
+            name="bookingEmail"
+            type="email"
+            placeholder="twoj@email.pl"
+            required
+          >
+
+          <label for="bookingPhone">
+            Telefon
+          </label>
+
+          <input
+            id="bookingPhone"
+            name="bookingPhone"
+            type="tel"
+            placeholder="123 456 789"
+            required
+          >
+
+          <label for="people">
+            Liczba osób
+          </label>
+
+          <select
+            id="people"
+            name="people"
+            required
+          >
+            <option value="">Wybierz</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+
+          <label for="session">
+            Godzina
+          </label>
+
+          <select
+            id="session"
+            name="session"
+            required
+          >
+            <option value="">Wybierz godzinę</option>
+            <option>10:00</option>
+            <option>12:00</option>
+            <option>14:00</option>
+            <option>16:00</option>
+            <option>18:00</option>
+            <option>20:00</option>
+          </select>
+
+          <label>
+            Metoda płatności
+          </label>
+
+          <div class="payment-options">
+
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="online"
+                required
+              >
+              💳 Płatność online
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="onsite"
+              >
+              💵 Na miejscu
+            </label>
+
+          </div>
+
+          <button
+            class="btn primary"
+            type="submit"
+            style="width:100%;margin-top:20px"
+          >
+            ZAREZERWUJ
+          </button>
+
+          <div
+            id="bookingStatus"
+            class="booking-status"
+          ></div>
+
+          <p class="booking-note">
+            To jest wersja demonstracyjna formularza.
+            Rezerwacja zostanie zapisana lokalnie
+            w tej przeglądarce. System wspólnych
+            rezerwacji dla wszystkich klientów
+            podłączymy w kolejnym kroku.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BUFET ================= -->
+
+<section id="bufet" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        MINI KAWIARNIA
+      </div>
+
+      <h2>
+        Coś dobrego po jeździe.
+      </h2>
+
+      <p>
+        Mała strefa odpoczynku dla
+        rodziców, dzieci i znajomych.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">☕</div>
+        <h3>Napoje</h3>
+        <p>
+          Kawa, herbata, kakao,
+          napoje zimne i woda.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🍿</div>
+        <h3>Przekąski</h3>
+        <p>
+          Popcorn, słodkości i szybkie
+          przekąski dla małych i dużych.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🍰</div>
+        <h3>Coś słodkiego</h3>
+        <p>
+          Desery i słodkie dodatki
+          do rodzinnego spotkania.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PLAKATY ================= -->
+
+<section id="plakaty">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        PLAKATY
+      </div>
+
+      <h2>
+        Wydarzenia ROL GO.
+      </h2>
+
+    </div>
+
+    <div class="gallery">
+
+      <img
+        class="big"
+        src="poster.png"
+        alt="Plakat ROL GO"
+      >
+
+      <div class="card">
+        <div class="icon">📣</div>
+
+        <h3>
+          Śledź nasze wydarzenia
+        </h3>
+
+        <p>
+          Specjalne jazdy, imprezy tematyczne,
+          urodziny i wydarzenia rodzinne
+          będziemy publikować tutaj oraz
+          na naszym Facebooku.
+        </p>
+
+        <div class="actions">
+
+          <a
+            class="btn primary"
+            href="https://www.facebook.com/share/1KLhuZUzrQ/"
+            target="_blank"
+            rel="noopener"
+          >
+            FACEBOOK
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= URODZINY ================= -->
+
+<section id="urodziny" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        URODZINY
+      </div>
+
+      <h2>
+        Zorganizuj urodziny na wrotkach.
+      </h2>
+
+      <p>
+        Urodzinowa zabawa może połączyć
+        jazdę, muzykę, jedzenie i specjalną
+        strefę dla solenizanta.
+      </p>
+
+    </div>
+
+    <div class="events">
+
+      <div class="event">
+        <strong>🎂 Urodzinowy pakiet</strong>
+        <p>
+          Wrotki, jazda i przygotowana
+          przestrzeń dla grupy.
+        </p>
+      </div>
+
+      <div class="event">
+        <strong>🎈 Dekoracje</strong>
+        <p>
+          Możliwość przygotowania
+          dekoracji i stołu urodzinowego.
+        </p>
+      </div>
+
+      <div class="event">
+        <strong>🎉 Zabawa</strong>
+        <p>
+          Muzyka, konkursy i aktywności
+          dopasowane do wieku uczestników.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DZIEŃ DZIECKA ================= -->
+
+<section id="dzien-dziecka">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        DZIEŃ DZIECKA
+      </div>
+
+      <h2>
+        Specjalne wydarzenia dla dzieci.
+      </h2>
+
+      <p>
+        ROL GO może przygotowywać
+        specjalne dni pełne muzyki,
+        zabawy i konkursów.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">🛼</div>
+        <h3>Jazda</h3>
+        <p>
+          Specjalne sesje dla dzieci.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🏆</div>
+        <h3>Konkursy</h3>
+        <p>
+          Zabawy i konkursy z nagrodami.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🍭</div>
+        <h3>Słodka strefa</h3>
+        <p>
+          Przekąski i słodkości dla
+          uczestników wydarzenia.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= KONTAKT ================= -->
+
+<section id="kontakt" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        KONTAKT
+      </div>
+
+      <h2>
+        Do zobaczenia w ROL GO!
+      </h2>
+
+      <p>
+        Sucha Beskidzka
+      </p>
+
+    </div>
+
+    <div class="contact">
+
+      <div class="contact-box">
+
+        <div class="contact-row">
+          <b>📍 Lokalizacja</b>
+          Sucha Beskidzka
+        </div>
+
+        <div class="contact-row">
+          <b>📧 E-mail</b>
+          kontakt@rolgo.pl
+        </div>
+
+        <div class="contact-row">
+          <b>📞 Telefon</b>
+          +48 000 000 000
+        </div>
+
+      </div>
+
+      <div class="contact-box">
+
+        <h3>
+          Znajdź nas na Facebooku
+        </h3>
+
+        <p style="color:var(--muted)">
+          Obserwuj informacje o otwarciu,
+          wydarzeniach i promocjach.
+        </p>
+
+        <a
+          class="btn primary"
+          href="https://www.facebook.com/share/1KLhuZUzrQ/"
+          target="_blank"
+          rel="noopener"
+        >
+          FACEBOOK ROL GO
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= STOPKA ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <strong>
+      ROL GO • Wrotkowisko • Kawiarnia • Zabawa
+    </strong>
+
+    <div class="note">
+      © 2026 ROL GO. Wszystkie prawa zastrzeżone.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* ===== MENU MOBILNE ===== */
+
+function toggleMenu(){
+
+  const links = document.getElementById("mainLinks");
+
+  links.classList.toggle("show");
+
+}
+
+
+/* ===== KALENDARZ ===== */
+
+const calendarElement =
+  document.getElementById("calendar");
+
+const calendarTitle =
+  document.getElementById("calendarTitle");
+
+const selectedDateInput =
+  document.getElementById("selectedDate");
+
+const bookingStatus =
+  document.getElementById("bookingStatus");
+
+let currentDate = new Date();
+
+currentDate.setDate(1);
+
+let selectedDate = null;
+
+
+/*
+  Przykładowe zajęte terminy.
+
+  Format:
+  YYYY-MM-DD
+
+  Możesz później zmienić te daty.
+*/
+
+const defaultBookedDates = [
+
+  "2026-10-03",
+  "2026-10-10",
+  "2026-10-17",
+  "2026-10-24",
+  "2026-10-31",
+
+  "2026-11-07",
+  "2026-11-14",
+  "2026-11-21",
+  "2026-11-28"
+
+];
+
+
+/* Pobieranie dodatkowych lokalnych rezerwacji */
+
+function getLocalBookings(){
+
+  try{
+
+    return JSON.parse(
+      localStorage.getItem("rolgoBookings") || "[]"
+    );
+
+  }catch(error){
+
+    return [];
+
+  }
+
+}
+
+
+/* Lista zajętych dni */
+
+function getBookedDates(){
+
+  const bookings = getLocalBookings();
+
+  const localDates = bookings
+    .map(function(booking){
+      return booking.date;
+    })
+    .filter(Boolean);
+
+  return [
+    ...new Set([
+      ...defaultBookedDates,
+      ...localDates
+    ])
+  ];
+
+}
+
+
+/* Format daty */
+
+function formatDate(date){
+
+  const year =
+    date.getFullYear();
+
+  const month =
+    String(date.getMonth() + 1)
+    .padStart(2,"0");
+
+  const day =
+    String(date.getDate())
+    .padStart(2,"0");
+
+  return year + "-" + month + "-" + day;
+
+}
+
+
+/* Polski zapis daty */
+
+function polishDate(date){
+
+  return date.toLocaleDateString(
+    "pl-PL",
+    {
+      day:"2-digit",
+      month:"2-digit",
+      year:"numeric"
+    }
+  );
+
+}
+
+
+/* Czy data jest przeszła */
+
+function isPast(date){
+
+  const today = new Date();
+
+  today.setHours(0,0,0,0);
+
+  const check = new Date(date);
+
+  check.setHours(0,0,0,0);
+
+  return check < today;
+
+}
+
+
+/* Rysowanie kalendarza */
+
+function renderCalendar(){
+
+  calendarElement.innerHTML = "";
+
+  const year =
+    currentDate.getFullYear();
+
+  const month =
+    currentDate.getMonth();
+
+  const monthName =
+    currentDate.toLocaleDateString(
+      "pl-PL",
+      {
+        month:"long",
+        year:"numeric"
+      }
+    );
+
+  calendarTitle.textContent =
+    monthName.charAt(0).toUpperCase() +
+    monthName.slice(1);
+
+
+  /*
+    JavaScript:
+    0 = niedziela
+    1 = poniedziałek
+
+    Przesuwamy tak,
+    aby poniedziałek był pierwszy.
+  */
+
+  const firstDay =
+    new Date(year,month,1).getDay();
+
+  const offset =
+    firstDay === 0 ? 6 : firstDay - 1;
+
+  const daysInMonth =
+    new Date(year,month + 1,0).getDate();
+
+  const bookedDates =
+    getBookedDates();
+
+
+  /* Puste pola przed pierwszym dniem */
+
+  for(let i=0;i<offset;i++){
+
+    const empty =
+      document.createElement("button");
+
+    empty.className =
+      "day empty";
+
+    empty.type =
+      "button";
+
+    calendarElement.appendChild(empty);
+
+  }
+
+
+  /* Dni miesiąca */
+
+  for(let day=1;day<=daysInMonth;day++){
+
+    const date =
+      new Date(year,month,day);
+
+    const dateString =
+      formatDate(date);
+
+    const button =
+      document.createElement("button");
+
+    button.type =
+      "button";
+
+    button.className =
+      "day";
+
+    button.textContent =
+      day;
+
+
+    if(isPast(date)){
+
+      button.classList.add("past");
+
+    }else if(bookedDates.includes(dateString)){
+
+      button.classList.add("booked");
+
+    }else{
+
+      button.classList.add("available");
+
+      button.addEventListener(
+        "click",
+        function(){
+
+          selectDate(
+            date,
+            dateString
+          );
+
+        }
+      );
+
+    }
+
+
+    if(
+      selectedDate === dateString
+    ){
+
+      button.classList.add("selected");
+
+    }
+
+
+    calendarElement.appendChild(button);
+
+  }
+
+}
+
+
+/* Wybór dnia */
+
+function selectDate(
+  date,
+  dateString
+){
+
+  selectedDate =
+    dateString;
+
+  selectedDateInput.value =
+    polishDate(date);
+
+  renderCalendar();
+
+  bookingStatus.className =
+    "booking-status";
+
+  bookingStatus.textContent =
+    "";
+
+}
+
+
+/* Zmiana miesiąca */
+
+function changeMonth(direction){
+
+  currentDate.setMonth(
+    currentDate.getMonth() + direction
+  );
+
+  renderCalendar();
+
+}
+
+
+/* ===== FORMULARZ REZERWACJI ===== */
+
+document
+  .getElementById("bookingForm")
+  .addEventListener(
+    "submit",
+    function(event){
+
+      event.preventDefault();
+
+      bookingStatus.className =
+        "booking-status";
+
+      bookingStatus.textContent =
+        "";
+
+
+      if(!selectedDate){
+
+        bookingStatus.className =
+          "booking-status error";
+
+        bookingStatus.textContent =
+          "Najpierw wybierz dzień w kalendarzu.";
+
+        return;
+
+      }
+
+
+      const form =
+        event.target;
+
+
+      const name =
+        document
+          .getElementById("bookingName")
+          .value
+          .trim();
+
+      const email =
+        document
+          .getElementById("bookingEmail")
+          .value
+          .trim();
+
+      const phone =
+        document
+          .getElementById("bookingPhone")
+          .value
+          .trim();
+
+      const people =
+        document
+          .getElementById("people")
+          .value;
+
+      const session =
+        document
+          .getElementById("session")
+          .value;
+
+      const payment =
+        document.querySelector(
+          'input[name="payment"]:checked'
+        );
+
+
+      if(
+        !name ||
+        !email ||
+        !phone ||
+        !people ||
+        !session ||
+        !payment
+      ){
+
+        bookingStatus.className =
+          "booking-status error";
+
+        bookingStatus.textContent =
+          "Uzupełnij wszystkie pola formularza.";
+
+        return;
+
+      }
+
+
+      /*
+        Sprawdzamy jeszcze raz,
+        czy dzień nie został zajęty.
+      */
+
+      const bookedDates =
+        getBookedDates();
+
+      if(bookedDates.includes(selectedDate)){
+
+        bookingStatus.className =
+          "booking-status error";
+
+        bookingStatus.textContent =
+          "Ten termin jest już zajęty. Wybierz inny dzień.";
+
+        renderCalendar();
+
+        return;
+
+      }
+
+
+      const booking = {
+
+        date:selectedDate,
+        name:name,
+        email:email,
+        phone:phone,
+        people:people,
+        session:session,
+        payment:payment.value,
+        createdAt:new Date().toISOString()
+
+      };
+
+
+      const bookings =
+        getLocalBookings();
+
+      bookings.push(booking);
+
+
+      try{
+
+        localStorage.setItem(
+          "rolgoBookings",
+          JSON.stringify(bookings)
+        );
+
+      }catch(error){
+
+        bookingStatus.className =
+          "booking-status error";
+
+        bookingStatus.textContent =
+          "Nie udało się zapisać rezerwacji.";
+
+        return;
+
+      }
+
+
+      bookingStatus.className =
+        "booking-status ok";
+
+      bookingStatus.innerHTML =
+        "✅ Rezerwacja została zapisana.<br>" +
+        "Termin: <strong>" +
+        polishDate(
+          new Date(selectedDate + "T00:00:00")
+        ) +
+        "</strong><br>" +
+        "Godzina: <strong>" +
+        session +
+        "</strong><br>" +
+        "Liczba osób: <strong>" +
+        people +
+        "</strong><br><br>" +
+        (
+          payment.value === "online"
+          ? "💳 Wybrano płatność online."
+          : "💵 Wybrano płatność na miejscu."
+        );
+
+
+      selectedDate = null;
+
+      selectedDateInput.value = "";
+
+      form.reset();
+
+      renderCalendar();
+
+    }
+  );
+
+
+/* ===== START ===== */
+
+renderCalendar();
+
+</script>
+
+</body>
+</html>
