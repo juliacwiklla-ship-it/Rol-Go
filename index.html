@@ -5,150 +5,367 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ROL GO | Wrotkowisko • Kawiarnia • Zabawa</title>
 <meta name="description" content="ROL GO — nowoczesne wrotkowisko z mini kawiarnią. Sucha Beskidzka.">
+
 <style>
-:root{--navy:#07132e;--navy2:#0d2148;--cyan:#10c9f3;--yellow:#ffd21c;--pink:#ff2aa6;--white:#fff;--muted:#b9c7df;--line:#ffffff1c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:#fff;font-family:Inter,Arial,sans-serif;line-height:1.5}
-a{color:inherit}.container{width:min(1120px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:#07132eee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand img{width:68px;height:68px;object-fit:contain}.links{display:flex;gap:25px;font-weight:800}.links a{text-decoration:none}.links a:hover{color:var(--yellow)}
-.menu{display:none;border:0;background:none;color:white;font-size:30px}
-.hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:65px 0}
-.badge{display:inline-block;color:var(--yellow);font-weight:900;letter-spacing:3px;text-transform:uppercase}
-h1{font-size:clamp(65px,10vw,125px);line-height:.78;margin:17px 0;background:linear-gradient(90deg,var(--cyan),#61dcff,var(--yellow));-webkit-background-clip:text;color:transparent}
-.hero h2{font-size:clamp(27px,4vw,46px);line-height:1.05;margin:0 0 18px}.lead{font-size:20px;color:var(--muted);max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:900}.primary{background:var(--pink);box-shadow:0 12px 35px #ff2aa64a}.secondary{border:2px solid #ffffff35}.hero-art{width:100%;max-width:560px;margin:auto;display:block;filter:drop-shadow(0 30px 45px #0009)}
-section{padding:90px 0}.section-head{margin-bottom:30px}.eyebrow{color:var(--pink);font-weight:900;letter-spacing:2px}.section-head h2{font-size:clamp(36px,5vw,58px);margin:5px 0 8px}.section-head p{color:var(--muted);font-size:18px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#102651,#0b1b3b);border:1px solid var(--line);border-radius:26px;padding:28px;min-height:205px}.icon{font-size:38px}.card h3{font-size:24px;margin:12px 0 7px}.card p{color:var(--muted);margin:0}
-.dark{background:#050c1d}.price{font-size:40px;font-weight:1000;color:var(--yellow)}.price small{font-size:15px;color:var(--muted);font-weight:700}
-.price-card{min-height:0}.price-card ul{padding:0;margin:16px 0 0;list-style:none;color:var(--muted)}.price-card li{padding:6px 0;border-bottom:1px solid var(--line)}
-.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:25px;border:1px solid var(--line)}.gallery .big{min-height:520px}
-.events{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.event{padding:25px;border-radius:24px;background:#111f3d;border:1px solid var(--line)}.event strong{font-size:21px}.event p{color:var(--muted)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{padding:32px;border-radius:28px;background:linear-gradient(135deg,#122b59,#14123d);border:1px solid var(--line)}.contact-row{padding:14px 0;border-bottom:1px solid var(--line)}.contact-row b{display:block;color:var(--cyan)}
-footer{padding:35px 0;color:#8fa2c3;border-top:1px solid var(--line);text-align:center}
+:root{
+--navy:#07132e;--navy2:#0d2148;--cyan:#10c9f3;
+--yellow:#ffd21c;--pink:#ff2aa6;--white:#fff;
+--muted:#b9c7df;--line:#ffffff1c
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;background:var(--navy);color:#fff;
+font-family:Inter,Arial,sans-serif;line-height:1.5
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+
+header{
+position:sticky;top:0;z-index:20;background:#07132eee;
+backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+}
+.nav{
+height:78px;display:flex;align-items:center;
+justify-content:space-between
+}
+.brand img{width:68px;height:68px;object-fit:contain}
+.links{display:flex;gap:20px;font-weight:800;flex-wrap:wrap}
+.links a{text-decoration:none}
+.links a:hover{color:var(--yellow)}
+.menu{
+display:none;border:0;background:none;color:white;
+font-size:30px
+}
+
+.hero{
+min-height:calc(100vh - 78px);display:grid;
+grid-template-columns:1fr 1fr;align-items:center;
+gap:30px;padding:65px 0
+}
+.badge{
+display:inline-block;color:var(--yellow);
+font-weight:900;letter-spacing:3px;text-transform:uppercase
+}
+h1{
+font-size:clamp(65px,10vw,125px);line-height:.78;
+margin:17px 0;background:linear-gradient(
+90deg,var(--cyan),#61dcff,var(--yellow));
+-webkit-background-clip:text;color:transparent
+}
+.hero h2{
+font-size:clamp(27px,4vw,46px);
+line-height:1.05;margin:0 0 18px
+}
+.lead{font-size:20px;color:var(--muted);max-width:650px}
+.actions{
+display:flex;gap:12px;flex-wrap:wrap;margin-top:26px
+}
+.btn{
+display:inline-block;padding:14px 24px;
+border-radius:999px;text-decoration:none;font-weight:900
+}
+.primary{
+background:var(--pink);
+box-shadow:0 12px 35px #ff2aa64a
+}
+.secondary{border:2px solid #ffffff35}
+.hero-art{
+width:100%;max-width:560px;margin:auto;display:block;
+filter:drop-shadow(0 30px 45px #0009)
+}
+
+section{padding:90px 0}
+.section-head{margin-bottom:30px}
+.eyebrow{
+color:var(--pink);font-weight:900;letter-spacing:2px
+}
+.section-head h2{
+font-size:clamp(36px,5vw,58px);margin:5px 0 8px
+}
+.section-head p{color:var(--muted);font-size:18px}
+
+.cards{
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.card{
+background:linear-gradient(145deg,#102651,#0b1b3b);
+border:1px solid var(--line);border-radius:26px;
+padding:28px;min-height:205px
+}
+.icon{font-size:38px}
+.card h3{font-size:24px;margin:12px 0 7px}
+.card p{color:var(--muted);margin:0}
+
+.dark{background:#050c1d}
+.price{
+font-size:40px;font-weight:1000;color:var(--yellow)
+}
+.price small{
+font-size:15px;color:var(--muted);font-weight:700
+}
+.price-card{min-height:0}
+.price-card ul{
+padding:0;margin:16px 0 0;
+list-style:none;color:var(--muted)
+}
+.price-card li{
+padding:6px 0;border-bottom:1px solid var(--line)
+}
+
+.gallery{
+display:grid;grid-template-columns:1.2fr .8fr;gap:18px
+}
+.gallery img{
+width:100%;height:100%;object-fit:cover;
+border-radius:25px;border:1px solid var(--line)
+}
+.gallery .big{min-height:520px}
+
+.events{
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.event{
+padding:25px;border-radius:24px;
+background:#111f3d;border:1px solid var(--line)
+}
+.event strong{font-size:21px}
+.event p{color:var(--muted)}
+
+.contact{
+display:grid;grid-template-columns:1fr 1fr;gap:25px
+}
+.contact-box{
+padding:32px;border-radius:28px;
+background:linear-gradient(135deg,#122b59,#14123d);
+border:1px solid var(--line)
+}
+.contact-row{
+padding:14px 0;border-bottom:1px solid var(--line)
+}
+.contact-row b{
+display:block;color:var(--cyan)
+}
+
+footer{
+padding:35px 0;color:#8fa2c3;
+border-top:1px solid var(--line);text-align:center
+}
 .note{font-size:13px;color:#8396b8;margin-top:20px}
-@media(max-width:800px){.links{display:none}.menu{display:block}.hero,.contact,.gallery{grid-template-columns:1fr}.cards,.events{grid-template-columns:1fr}.hero{text-align:center;padding-top:35px}.lead{margin-left:auto;margin-right:auto}.actions{justify-content:center}.hero-art{max-width:440px}.gallery .big{min-height:auto}}
+
+/* ===== REZERWACJA ===== */
+
+.booking-wrap{
+display:grid;grid-template-columns:1.15fr .85fr;gap:24px
+}
+
+.calendar-box,.booking-form{
+background:linear-gradient(145deg,#102651,#0b1b3b);
+border:1px solid var(--line);
+border-radius:28px;
+padding:24px
+}
+
+.calendar-head{
+display:flex;align-items:center;
+justify-content:space-between;
+gap:12px;margin-bottom:18px
+}
+
+.calendar-head h3{
+margin:0;font-size:26px
+}
+
+.cal-btn{
+border:1px solid #ffffff35;
+background:#07132e;color:#fff;
+border-radius:12px;
+padding:10px 14px;
+font-size:20px;
+cursor:pointer
+}
+
+.weekdays,.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:7px
+}
+
+.weekdays div{
+text-align:center;color:var(--muted);
+font-size:12px;font-weight:800;padding:5px 0
+}
+
+.day{
+min-height:48px;
+border:1px solid #ffffff18;
+border-radius:12px;
+background:#0b1b3b;
+color:#fff;
+cursor:pointer;
+font-weight:800
+}
+
+.day.empty{
+visibility:hidden;
+cursor:default
+}
+
+.day.past{
+opacity:.3;
+cursor:not-allowed
+}
+
+.day.available{
+border-color:#25d366;
+background:#103d32
+}
+
+.day.booked{
+border-color:#ff3b30;
+background:#7d1f25;
+color:#fff;
+cursor:not-allowed
+}
+
+.day.selected{
+outline:3px solid var(--yellow);
+background:#665600
+}
+
+.booking-legend{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-top:16px;
+color:var(--muted);
+font-size:13px
+}
+
+.legend-item{
+display:flex;
+align-items:center;
+gap:7px
+}
+
+.legend-dot{
+width:13px;
+height:13px;
+border-radius:4px
+}
+
+.green{background:#25d366}
+.red{background:#ff3b30}
+.yellow{background:var(--yellow)}
+
+.booking-form h3{
+margin-top:0;font-size:26px
+}
+
+.booking-form label{
+display:block;
+margin:13px 0 6px;
+font-weight:800
+}
+
+.booking-form input,
+.booking-form select{
+width:100%;
+padding:13px;
+border-radius:12px;
+border:1px solid #ffffff2a;
+background:#07132e;
+color:#fff;
+font-size:16px
+}
+
+.payment-options{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px
+}
+
+.payment-options label{
+margin:0;
+padding:12px;
+border:1px solid #ffffff25;
+border-radius:12px;
+cursor:pointer;
+font-size:14px
+}
+
+.payment-options input{
+width:auto;
+margin-right:6px
+}
+
+.booking-status{
+margin-top:15px;
+padding:12px;
+border-radius:12px;
+display:none
+}
+
+.booking-status.ok{
+display:block;
+background:#124b2c;
+border:1px solid #25d366
+}
+
+.booking-status.error{
+display:block;
+background:#5b1e23;
+border:1px solid #ff3b30
+}
+
+.booking-note{
+font-size:12px;
+color:var(--muted);
+margin-top:12px
+}
+
+@media(max-width:800px){
+.links{display:none}
+.menu{display:block}
+.hero,.contact,.gallery{grid-template-columns:1fr}
+.cards,.events{grid-template-columns:1fr}
+.booking-wrap{grid-template-columns:1fr}
+.hero{text-align:center;padding-top:35px}
+.lead{margin-left:auto;margin-right:auto}
+.actions{justify-content:center}
+.hero-art{max-width:440px}
+.gallery .big{min-height:auto}
+.day{min-height:43px;padding:4px}
+.calendar-head h3{font-size:21px}
+}
 </style>
 </head>
+
 <body>
-<header><div class="container nav">
-<a class="brand" href="#"><img src="logo.png" alt="ROL GO"></a>
-<nav class="links"><a href="#o-nas">O nas</a><a href="#atrakcje">Atrakcje</a><a href="#cennik">Cennik</a><a href="#godziny">Godziny</a><a href="#urodziny">Urodziny</a><a href="#dzien-dziecka">Dzień Dziecka</a><a href="#kontakt">Kontakt</a></nav>
-<button class="menu" onclick="document.querySelector('.links').style.display='flex'">☰</button>
-</div></header>
 
-<main>
-<section class="container hero">
-<div>
-<span class="badge">Sucha Beskidzka • już wkrótce</span>
-<h1>ROL GO</h1>
-<h2>Wskakuj na wrotki. Zostań na zabawę.</h2>
-<p class="lead">Nowoczesne wrotkowisko, muzyka, światła i mini kawiarnia — stworzone z myślą o rodzinach, młodzieży i wszystkich, którzy kochają ruch.</p>
-<div class="actions"><a class="btn primary" href="#kontakt">Chcę wiedzieć więcej</a><a class="btn secondary" href="#cennik">Zobacz plan oferty</a></div>
-</div>
-<img class="hero-art" src="poster.png" alt="Dwie niebieskie wrotki ROL GO">
-</section>
+<header>
+<div class="container nav">
 
-<section id="o-nas"><div class="container">
-<div class="section-head"><span class="eyebrow">O ROL GO</span><h2>Miejsce, do którego chce się wracać.</h2><p>Pomysł łączy aktywną zabawę z miejscem na odpoczynek i spotkania.</p></div>
-<div class="cards">
-<div class="card"><div class="icon">🛼</div><h3>Wrotkowisko</h3><p>Przestronna tafla, wypożyczalnia wrotek, muzyka i tematyczne sesje jazdy.</p></div>
-<div class="card"><div class="icon">☕</div><h3>Mini kawiarnia</h3><p>Kawa, napoje, desery i szybkie przekąski dla rodziców i rolkarzy.</p></div>
-<div class="card"><div class="icon">🎉</div><h3>Imprezy</h3><p>Urodziny, rodzinne wyjścia, szkolne grupy i wieczorne Roller Disco.</p></div>
-</div></div></section>
+<a class="brand" href="#">
+<img src="logo.png" alt="ROL GO">
+</a>
 
-<section class="dark" id="atrakcje"><div class="container">
-<div class="section-head"><span class="eyebrow">ATRAKCJE</span><h2>Co będzie się działo?</h2></div>
-<div class="events">
-<div class="event"><strong>🌈 Family Roll</strong><p>Spokojniejsza sesja dla rodzin i początkujących.</p></div>
-<div class="event"><strong>🎧 Roller Disco</strong><p>Wieczorna jazda z muzyką, światłami i wyjątkowym klimatem.</p></div>
-<div class="event"><strong>🎂 Urodziny na kółkach</strong><p>Jazda + stolik w kawiarni + tort i pakiet urodzinowy.</p></div>
-</div></div></section>
+<nav class="links">
+<a href="#o-nas">O nas</a>
+<a href="#atrakcje">Atrakcje</a>
+<a href="#cennik">Cennik</a>
+<a href="#godziny">Godziny</a>
+<a href="#rezerwacja">Rezerwacja</a>
+<a href="#bufet">Bufet</a>
+<a href="#plakaty">Plakaty</a>
+<a href="#urodziny">Urodziny</a>
+<a href="#dzien-dziecka">Dzień Dziecka</a>
+<a href="#kontakt">Kontakt</a>
+<a href="https://www.facebook.com/share/1KLhuZUzrQ/"
+target="_blank" rel="noopener">Facebook</a>
+</nav>
 
-<section id="cennik"><div class="container">
-<div class="section-head"><span class="eyebrow">OFERTA — PROJEKT</span><h2>Przykładowy cennik</h2><p>Ceny są robocze — ustalimy je po policzeniu kosztów hali, obsługi i wyposażenia.</p></div>
-<div class="cards">
-<div class="card price-card"><h3>Wejście</h3><div class="price">35 zł <small>/ osoba</small></div><ul><li>sesja jazdy</li><li>wstęp na taflę</li><li>muzyka i światła</li></ul></div>
-<div class="card price-card"><h3>Wrotki</h3><div class="price">+10 zł</div><ul><li>wypożyczenie pary</li><li>różne rozmiary</li><li>dezynfekcja sprzętu</li></ul></div>
-<div class="card price-card"><h3>Urodziny</h3><div class="price">od 499 zł</div><ul><li>pakiet dla grupy</li><li>miejsce w kawiarni</li><li>możliwość rozszerzenia pakietu</li></ul></div>
-</div>
-<p class="note">* Cennik jest makietą strony, a nie aktualnym cennikiem działającego obiektu.</p>
-</div></section>
-
-
-<section class="dark" id="godziny"><div class="container">
-<div class="section-head"><span class="eyebrow">GODZINY OTWARCIA</span><h2>Widzimy się na rolkach!</h2><p>W przypadku imprez urodzinowych w dni robocze jesteśmy otwarci dłużej.</p></div>
-<div class="cards">
-<div class="card"><div class="icon">📅</div><h3>Poniedziałek – piątek</h3><p><strong style="font-size:28px;color:var(--yellow)">14:00 – 22:00</strong></p><p>🎂 Urodziny: wyjątkowo do <strong>23:00</strong></p></div>
-<div class="card"><div class="icon">🛼</div><h3>Sobota</h3><p><strong style="font-size:28px;color:var(--yellow)">10:00 – 23:00</strong></p><p>Idealny dzień na rodzinny wypad i Roller Disco.</p></div>
-<div class="card"><div class="icon">🎉</div><h3>Niedziela</h3><p><strong style="font-size:28px;color:var(--yellow)">10:00 – 23:00</strong></p><p>Spokojna jazda, rodziny i urodzinowa zabawa.</p></div>
-</div></div></section>
-
-<section class="dark" id="urodziny"><div class="container">
-<div class="gallery"><img class="big" src="poster.png" alt="Plakat ROL GO"><div class="contact-box"><span class="eyebrow">URODZINY</span><h2>Twoje urodziny na wrotkach?</h2><p class="lead">Możemy przygotować pakiety dla dzieci, młodzieży i dorosłych — z jazdą, muzyką, przekąskami i miejscem przy stoliku.</p><a class="btn primary" href="#kontakt">Zapytaj o pakiet</a></div></div>
-</div></section>
-
-<section class="dark" id="dzien-dziecka"><div class="container">
-<div class="section-head"><span class="eyebrow">🎈 DZIEŃ DZIECKA W ROL GO</span><h2>Dzień Dziecka na wrotkach!</h2><p>Każde dziecko do 18. roku życia korzysta z wyjątkowej promocji.</p></div>
-<div class="cards">
-<div class="card"><div class="icon">🛼</div><h3>50% taniej</h3><p>Każde dziecko do 18. roku życia ma <strong>50% zniżki na wejście</strong>.</p></div>
-<div class="card"><div class="icon">🍕🥤</div><h3>Darmowy poczęstunek</h3><p><strong>Darmowe jedzenie i napój</strong> dla każdego dziecka objętego promocją.</p></div>
-<div class="card"><div class="icon">🎉</div><h3>Wielka zabawa</h3><p>Muzyka, światła, konkursy i wyjątkowa atmosfera ROL GO.</p></div>
-</div>
-<div class="contact-box" style="margin-top:18px;text-align:center"><h3>„DZIEŃ DZIECKA? TO TYLKO NA WROTKACH!” 🛼🎈</h3><p class="lead" style="margin:10px auto 0">ROL GO zaprasza wszystkie dzieci i ich rodziny na wyjątkowy dzień pełen jazdy i zabawy.</p></div>
-</div></section>
-
-
-<section id="ulgi" class="section">
-  <div class="container">
-    <div class="section-title">
-      <span>💙 ROL GO</span>
-      <h2>Ulgi dla rodzin i grup</h2>
-      <p>Więcej osób = więcej wspólnej zabawy i korzystniejsza cena.</p>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <h3>👨‍👩‍👧‍👦 Duża rodzina</h3>
-        <p><strong>10% rabatu</strong> na wejście dla rodzin liczących minimum 4 osoby.</p>
-        <small>Rabat dotyczy wejściówek. Szczegółowe zasady mogą zostać doprecyzowane w regulaminie.</small>
-      </article>
-      <article class="card">
-        <h3>👥 Grupy</h3>
-        <p><strong>15% rabatu</strong> na wejście dla grup od 10 osób.</p>
-        <small>Oferta dla grup zorganizowanych, szkolnych, kolonijnych i innych grup po wcześniejszej rezerwacji.</small>
-      </article>
-      <article class="card">
-        <h3>🎉 Grupy zorganizowane</h3>
-        <p>Przy większych grupach możliwość przygotowania <strong>indywidualnej oferty</strong> i rezerwacji całej strefy.</p>
-        <small>Skontaktuj się z nami, aby ustalić szczegóły.</small>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<section class="dark" id="marka-rol-go"><div class="container">
-<div class="section-head"><span class="eyebrow">MARKA ROL GO</span><h2>Poznaj nasze logo i plakat.</h2><p>Nasza identyfikacja wizualna — neonowy klimat, wrotki i energia ROL GO.</p></div>
-<div class="gallery">
-<div><img class="big" src="logo.png" alt="Logo ROL GO"><p style="color:var(--muted);text-align:center;margin-top:10px">Logo ROL GO</p></div>
-<div><img class="big" src="poster.png" alt="Plakat ROL GO"><p style="color:var(--muted);text-align:center;margin-top:10px">Plakat ROL GO</p></div>
-</div></div></section>
-
-<section id="kontakt"><div class="container">
-<div class="section-head"><span class="eyebrow">KONTAKT</span><h2>Zaczynamy budować ROL GO.</h2><p>Na tym etapie możemy podstawić prawdziwe dane, gdy je ustalimy.</p></div>
-<div class="contact">
-<div class="contact-box">
-<div class="contact-row"><b>📍 Lokalizacja</b>Sucha Beskidzka — dokładne miejsce do ustalenia</div>
-<div class="contact-row"><b>📧 E-mail</b>juliacwiklla@gmail.com</div>
-<div class="contact-row"><b>📱 Telefon</b>575 045 779 • 730 009 586</div>
-<div class="contact-row"><b>📸 Social media</b>Instagram • Facebook • TikTok — do uruchomienia</div>
-</div>
-<div class="contact-box">
-<h3>Chcesz dostać informacje o otwarciu?</h3>
-<p class="lead">W prawdziwej wersji strony dodamy tutaj formularz zapisu na listę zainteresowanych.</p>
-<a class="btn primary" href="mailto:juliacwiklla@gmail.com?subject=ROL%20GO%20-%20informacje">Napisz do ROL GO</a>
-</div>
-</div></div></section>
-</main>
-<footer>ROL GO • WROTKOWISKO • KAWIARNIA • ZABAWA<br><small>Projekt koncepcyjny strony internetowej</small></footer>
-</body>
-</html>
+<button class="menu"
+onclick="document.querySelector('.links').style.display='flex'">
+☰
+</button>
